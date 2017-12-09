@@ -11,6 +11,10 @@
 		98EFA0CF1FDA982C00E4E9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFA0CE1FDA982C00E4E9BC /* ViewController.swift */; };
 		98EFA0D11FDA982C00E4E9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EFA0D01FDA982C00E4E9BC /* Assets.xcassets */; };
 		98EFA0D41FDA982C00E4E9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98EFA0D21FDA982C00E4E9BC /* Main.storyboard */; };
+		98EFA0DD1FDA9FD200E4E9BC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFA0DC1FDA9FD200E4E9BC /* Item.swift */; };
+		98EFA0DF1FDAAAAB00E4E9BC /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFA0DE1FDAAAAB00E4E9BC /* TestData.swift */; };
+		98EFA0E41FDABD1200E4E9BC /* ViewController+NSOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFA0E31FDABD1200E4E9BC /* ViewController+NSOutlineViewDelegate.swift */; };
+		98EFA0E61FDABD3E00E4E9BC /* ViewController+NSOutlineViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EFA0E51FDABD3E00E4E9BC /* ViewController+NSOutlineViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		98EFA0D31FDA982C00E4E9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98EFA0D51FDA982C00E4E9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98EFA0D61FDA982C00E4E9BC /* OutlineViewDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutlineViewDemo.entitlements; sourceTree = "<group>"; };
+		98EFA0DC1FDA9FD200E4E9BC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		98EFA0DE1FDAAAAB00E4E9BC /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		98EFA0E31FDABD1200E4E9BC /* ViewController+NSOutlineViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NSOutlineViewDelegate.swift"; sourceTree = "<group>"; };
+		98EFA0E51FDABD3E00E4E9BC /* ViewController+NSOutlineViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NSOutlineViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			children = (
 				98EFA0CB1FDA982C00E4E9BC /* OutlineViewDemo */,
 				98EFA0CA1FDA982C00E4E9BC /* Products */,
+				98EFA0E01FDAB30600E4E9BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +62,25 @@
 		98EFA0CB1FDA982C00E4E9BC /* OutlineViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				98EFA0CC1FDA982C00E4E9BC /* AppDelegate.swift */,
-				98EFA0CE1FDA982C00E4E9BC /* ViewController.swift */,
-				98EFA0D01FDA982C00E4E9BC /* Assets.xcassets */,
-				98EFA0D21FDA982C00E4E9BC /* Main.storyboard */,
 				98EFA0D51FDA982C00E4E9BC /* Info.plist */,
 				98EFA0D61FDA982C00E4E9BC /* OutlineViewDemo.entitlements */,
+				98EFA0D01FDA982C00E4E9BC /* Assets.xcassets */,
+				98EFA0CC1FDA982C00E4E9BC /* AppDelegate.swift */,
+				98EFA0D21FDA982C00E4E9BC /* Main.storyboard */,
+				98EFA0CE1FDA982C00E4E9BC /* ViewController.swift */,
+				98EFA0E31FDABD1200E4E9BC /* ViewController+NSOutlineViewDelegate.swift */,
+				98EFA0E51FDABD3E00E4E9BC /* ViewController+NSOutlineViewDataSource.swift */,
+				98EFA0DC1FDA9FD200E4E9BC /* Item.swift */,
+				98EFA0DE1FDAAAAB00E4E9BC /* TestData.swift */,
 			);
 			path = OutlineViewDemo;
+			sourceTree = "<group>";
+		};
+		98EFA0E01FDAB30600E4E9BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +116,14 @@
 					98EFA0C81FDA982C00E4E9BC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EFA0CF1FDA982C00E4E9BC /* ViewController.swift in Sources */,
+				98EFA0DD1FDA9FD200E4E9BC /* Item.swift in Sources */,
 				98EFA0CD1FDA982C00E4E9BC /* AppDelegate.swift in Sources */,
+				98EFA0E41FDABD1200E4E9BC /* ViewController+NSOutlineViewDelegate.swift in Sources */,
+				98EFA0E61FDABD3E00E4E9BC /* ViewController+NSOutlineViewDataSource.swift in Sources */,
+				98EFA0DF1FDAAAAB00E4E9BC /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +295,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OutlineViewDemo/OutlineViewDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2P8L2WJ5P9;
 				INFOPLIST_FILE = OutlineViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tr.com.adeo.OutlineViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -279,14 +311,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OutlineViewDemo/OutlineViewDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2P8L2WJ5P9;
 				INFOPLIST_FILE = OutlineViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tr.com.adeo.OutlineViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
