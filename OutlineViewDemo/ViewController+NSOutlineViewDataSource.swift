@@ -3,7 +3,6 @@
 //  OutlineViewDemo
 //
 //  Created by Nejat Serpen on 08/12/2017.
-//  Copyright © 2017 Adeo IT. All rights reserved.
 //
 
 import Cocoa
@@ -17,17 +16,14 @@ extension ViewController: NSOutlineViewDataSource {
         }
 
         if let item = item as? Item {
-            if item.type == .Node {
-                return 0
-            }
-            return item.children.count
+            return item.numberOfChildren
         }
 
-        return 0
+        return 0 // anything else
     }
 
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        if item == nil {
+        if item == nil { // root
             return data[index]
         }
 
@@ -35,12 +31,12 @@ extension ViewController: NSOutlineViewDataSource {
             return item.children[index]
         }
 
-        return "BAD ITEM"
+        return "UNKNOWN" // if this returns, check your code!
     }
     
     func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
         let item = item as! Item
-        return item.type != .Node
+        return item.isExpandable
     }
 
     func outlineView(_ outlineView: NSOutlineView, objectValueFor tableColumn: NSTableColumn?, byItem item: Any?) -> Any? {

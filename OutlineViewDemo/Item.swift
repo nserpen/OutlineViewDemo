@@ -3,7 +3,6 @@
 //  OutlineViewDemo
 //
 //  Created by Nejat Serpen on 08/12/2017.
-//  Copyright © 2017 Adeo IT. All rights reserved.
 //
 
 import Foundation
@@ -23,6 +22,12 @@ class Item {
     var isExpandable: Bool {
         get {
             return type != .Node
+        }
+    }
+    
+    var numberOfChildren: Int {
+        get {
+            return self.type == .Node ? 0 : self.children.count
         }
     }
 

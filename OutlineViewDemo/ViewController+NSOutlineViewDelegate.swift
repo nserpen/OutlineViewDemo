@@ -3,7 +3,6 @@
 //  OutlineViewDemo
 //
 //  Created by Nejat Serpen on 08/12/2017.
-//  Copyright © 2017 Adeo IT. All rights reserved.
 //
 
 import Cocoa
@@ -32,7 +31,7 @@ extension ViewController: NSOutlineViewDelegate {
                 cell.imageView!.image = item.type == .Container ? folderImage : nodeImage
                 return cell
             }
-        } else {
+        } else { // if GroupItem -> tableColumn is nil by design
             cell.imageView!.image = groupImage
             return cell
         }

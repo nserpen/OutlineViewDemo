@@ -3,7 +3,6 @@
 //  OutlineViewDemo
 //
 //  Created by Nejat Serpen on 08/12/2017.
-//  Copyright © 2017 Adeo IT. All rights reserved.
 //
 
 import Cocoa
